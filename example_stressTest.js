@@ -9,7 +9,7 @@ export const options = {
         //{ duration: '5s', target: 5 },
         //{ duration: '2s', target: 50 },
         //{ duration: '2s', target: 50 },
-      //  { duration: '5s', target: 0 },
+        //{ duration: '5s', target: 0 },
     ],
     thresholds: {
         http_req_failed: ['rate < 0.01']
