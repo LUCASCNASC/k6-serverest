@@ -3,4 +3,4 @@ import { sleep, check } from 'k6';
 import { Counter, Gauge, Rate, Trend } from 'k6/metrics';
 
 const PATH_URL = '/Carrinhos/delete_carrinhos_concluir_compra';
-const response1 = http.delete(`${__ENV.BASE_URL}/${PATH_URL}`);
+const BASE_URL = http.delete(`${__ENV.BASE_URL}/${PATH_URL}`);
