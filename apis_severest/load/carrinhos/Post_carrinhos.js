@@ -3,4 +3,4 @@ import { sleep, check } from 'k6';
 import { Counter, Gauge, Rate, Trend } from 'k6/metrics';
 
 const PATH_URL = '/Carrinhos/post_carrinhos';
-const response1 = http.post(`${__ENV.BASE_URL}/${PATH_URL}`);
+const BASE_URL = http.post(`${__ENV.BASE_URL}/${PATH_URL}`);
