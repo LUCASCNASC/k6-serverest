@@ -3,4 +3,4 @@ import { sleep, check } from 'k6';
 import { Counter, Gauge, Rate, Trend } from 'k6/metrics';
 
 const PATH_URL = '/Login/post_login';
-const response1 = http.post(`${__ENV.BASE_URL}/${PATH_URL}`);
+const respBASE_URLnse1 = http.post(`${__ENV.BASE_URL}/${PATH_URL}`);
