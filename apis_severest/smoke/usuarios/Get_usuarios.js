@@ -5,7 +5,6 @@ import { Counter, Gauge, Rate, Trend } from 'k6/metrics';
 const PATH_URL = '/Usuários/get_usuarios';
 const BASE_URL = http.get(`${__ENV.BASE_URL}/${PATH_URL}`);
 
-
 export const options = {
   vus: 1,
   duration: '30s',
