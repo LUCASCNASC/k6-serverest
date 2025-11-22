@@ -1,6 +1,24 @@
-import http from 'k6/http'; 
-import { sleep, check } from 'k6';
-import { Counter, Gauge, Rate, Trend } from 'k6/metrics';
+import http from 'k6/http';
+import { sleep } from 'k6';
 
-const PATH_URL = '/Carrinhos/delete_carrinhos_cancelar_compra';
-const BASE_URL = http.delete(`${__ENV.BASE_URL}/${PATH_URL}`);
+export const options = {
+    stages: [
+        {
+            duration: '5m',
+            target: 100
+        },
+        {
+            duration: '30m',
+            target: 100
+        },
+        {
+            duration: '5m',
+            target: 0
+        }
+    ]
+};
+
+export default function () {
+    http.del('https://serverest.dev/#/Carrinhos/delete_carrinhos_cancelar_compra');
+    sleep(1);
+}

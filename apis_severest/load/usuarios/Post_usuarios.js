@@ -1,6 +1,24 @@
-import http from 'k6/http'; 
-import { sleep, check } from 'k6';
-import { Counter, Gauge, Rate, Trend } from 'k6/metrics';
+import http from 'k6/http';
+import { sleep } from 'k6';
 
-const PATH_URL = '/Usuários/post_usuarios';
-const BASE_URL = http.post(`${__ENV.BASE_URL}/${PATH_URL}`)
+export const options = {
+    stages: [
+        {
+            duration: '5m',
+            target: 100
+        },
+        {
+            duration: '30m',
+            target: 100
+        },
+        {
+            duration: '5m',
+            target: 0
+        }
+    ]
+};
+
+export default function () {
+    http.post('https://serverest.dev/#/Usu%C3%A1rios/post_usuarios');
+    sleep(1);
+}

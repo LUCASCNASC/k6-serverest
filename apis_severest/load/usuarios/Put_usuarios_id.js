@@ -1,6 +1,24 @@
-import http from 'k6/http'; 
-import { sleep, check } from 'k6';
-import { Counter, Gauge, Rate, Trend } from 'k6/metrics';
+import http from 'k6/http';
+import { sleep } from 'k6';
 
-const PATH_URL = '/Usuários/put_usuarios___id_';
-const BASE_URL = http.put(`${__ENV.BASE_URL}/${PATH_URL}/1`);
+export const options = {
+    stages: [
+        {
+            duration: '5m',
+            target: 100
+        },
+        {
+            duration: '30m',
+            target: 100
+        },
+        {
+            duration: '5m',
+            target: 0
+        }
+    ]
+};
+
+export default function () {
+    http.put('https://serverest.dev/#/Usu%C3%A1rios/put_usuarios___id_');
+    sleep(1);
+}
