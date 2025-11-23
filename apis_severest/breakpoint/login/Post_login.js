@@ -1,6 +1,16 @@
-import http from 'k6/http'; 
-import { sleep, check } from 'k6';
-import { Counter, Gauge, Rate, Trend } from 'k6/metrics';
+import http from 'k6/http';
+import { sleep } from 'k6';
 
-const PATH_URL = '/Login/post_login';
-const BASE_URL = http.post(`${__ENV.BASE_URL}/${PATH_URL}`);
+export const options = {
+    stages: [
+        {
+            duration: '2h',
+            target: 10000
+        }
+    ]
+};
+
+export default function () {
+    http.post('https://serverest.dev/#/Login/post_login');
+    sleep(1);
+}

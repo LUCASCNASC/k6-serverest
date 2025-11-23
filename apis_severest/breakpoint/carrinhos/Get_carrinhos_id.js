@@ -1,6 +1,16 @@
-import http from 'k6/http'; 
-import { sleep, check } from 'k6';
-import { Counter, Gauge, Rate, Trend } from 'k6/metrics';
+import http from 'k6/http';
+import { sleep } from 'k6';
 
-const PATH_URL = '/Carrinhos/get_carrinhos___id_';
-const BASE_URL = http.get(`${__ENV.BASE_URL}/${PATH_URL}/1`);
+export const options = {
+    stages: [
+        {
+            duration: '2h',
+            target: 10000
+        }
+    ]
+};
+
+export default function () {
+    http.get('https://serverest.dev/#/');
+    sleep(1);
+}
