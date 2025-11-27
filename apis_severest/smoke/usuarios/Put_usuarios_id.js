@@ -7,6 +7,6 @@ export const options = {
 };
 
 export default function () {
-    http.put('https://serverest.dev/#/Usuarios/put_usuarios___id_');
+    const res = http.put('https://serverest.dev/#/Usuarios/put_usuarios___id_');
     sleep(1);
 }

@@ -11,6 +11,6 @@ export const options = {
 };
 
 export default function () {
-    http.post('https://serverest.dev/#/Carrinhos/post_carrinhos');
+    const res = http.post('https://serverest.dev/#/Carrinhos/post_carrinhos');
     sleep(1);
 }

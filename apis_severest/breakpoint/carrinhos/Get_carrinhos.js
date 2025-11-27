@@ -11,6 +11,6 @@ export const options = {
 };
 
 export default function () {
-    http.get('https://serverest.dev/#/Carrinhos/get_carrinhos');
+    const res = http.get('https://serverest.dev/#/Carrinhos/get_carrinhos');
     sleep(1);
 }

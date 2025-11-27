@@ -7,6 +7,6 @@ export const options = {
 };
 
 export default function () {
-    http.post('https://serverest.dev/#/Login/post_login');
+    const res = http.post('https://serverest.dev/#/Login/post_login');
     sleep(1);
 }

@@ -11,6 +11,6 @@ export const options = {
 };
 
 export default function () {
-    http.del('https://serverest.dev/#/Carrinhos/delete_carrinhos_concluir_compra');
+    const res = http.del('https://serverest.dev/#/Carrinhos/delete_carrinhos_concluir_compra');
     sleep(1);
 }

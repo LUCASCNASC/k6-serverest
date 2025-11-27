@@ -11,6 +11,6 @@ export const options = {
 };
 
 export default function () {
-    http.get('https://serverest.dev/#/');
+    const res = http.get('https://serverest.dev/#/');
     sleep(1);
 }

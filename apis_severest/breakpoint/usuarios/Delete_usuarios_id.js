@@ -11,6 +11,6 @@ export const options = {
 };
 
 export default function () {
-    http.del('https://serverest.dev/#/Usu%C3%A1rios/delete_usuarios___id_');
+    const res = http.del('https://serverest.dev/#/Usu%C3%A1rios/delete_usuarios___id_');
     sleep(1);
 }

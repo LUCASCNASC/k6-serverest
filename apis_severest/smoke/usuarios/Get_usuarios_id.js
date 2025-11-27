@@ -7,6 +7,6 @@ export const options = {
 };
 
 export default function () {
-    http.get('https://serverest.dev/#/Usuarios/get_usuarios___id_');
+    const res = http.get('https://serverest.dev/#/Usuarios/get_usuarios___id_');
     sleep(1);
 }

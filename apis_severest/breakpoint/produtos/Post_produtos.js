@@ -11,6 +11,6 @@ export const options = {
 };
 
 export default function () {
-    http.post('https://serverest.dev/#/Produtos/post_produtos');
+    const res = http.post('https://serverest.dev/#/Produtos/post_produtos');
     sleep(1);
 }

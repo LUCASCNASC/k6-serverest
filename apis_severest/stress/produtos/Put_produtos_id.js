@@ -19,6 +19,6 @@ export const options = {
 };
 
 export default function () {
-    http.put('https://serverest.dev/#/Produtos/put_produtos___id_');
+    const res = http.put('https://serverest.dev/#/Produtos/put_produtos___id_');
     sleep(1);
 }

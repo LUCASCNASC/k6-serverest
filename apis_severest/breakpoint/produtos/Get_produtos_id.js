@@ -11,6 +11,6 @@ export const options = {
 };
 
 export default function () {
-    http.get('https://serverest.dev/#/Produtos/get_produtos___id_');
+    const res = http.get('https://serverest.dev/#/Produtos/get_produtos___id_');
     sleep(1);
 }

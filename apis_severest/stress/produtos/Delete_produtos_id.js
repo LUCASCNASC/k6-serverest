@@ -19,6 +19,6 @@ export const options = {
 };
 
 export default function () {
-    http.del('https://serverest.dev/#/Produtos/delete_produtos___id_');
+    const res = http.del('https://serverest.dev/#/Produtos/delete_produtos___id_');
     sleep(1);
 }
