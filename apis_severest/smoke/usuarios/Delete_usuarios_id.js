@@ -9,4 +9,7 @@ export const options = {
 export default function () {
     const res = http.del('https://serverest.dev/#/Usuarios/delete_usuarios___id_');
     sleep(1);
+    check(res, {
+        'status is 200': (r) => r.status === 200
+    });
 }

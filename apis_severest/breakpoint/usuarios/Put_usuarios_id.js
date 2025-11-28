@@ -13,4 +13,7 @@ export const options = {
 export default function () {
     const res = http.put('https://serverest.dev/#/Usu%C3%A1rios/put_usuarios___id_');
     sleep(1);
+    check(res, {
+        'status is 200': (r) => r.status === 200
+    });
 }

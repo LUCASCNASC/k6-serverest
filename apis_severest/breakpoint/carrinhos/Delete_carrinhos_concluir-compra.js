@@ -13,4 +13,7 @@ export const options = {
 export default function () {
     const res = http.del('https://serverest.dev/#/Carrinhos/delete_carrinhos_concluir_compra');
     sleep(1);
+    check(res, {
+        'status is 200': (r) => r.status === 200
+    });
 }

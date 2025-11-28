@@ -28,4 +28,7 @@ export default function(){
         'status 200': (r) => r.status === 200
     });
     sleep(1);
+    check(res, {
+        'status is 200': (r) => r.status === 200
+    });
 }

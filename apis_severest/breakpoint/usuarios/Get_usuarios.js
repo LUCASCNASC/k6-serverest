@@ -13,4 +13,7 @@ export const options = {
 export default function () {
     const res = http.get('https://serverest.dev/#/Usu%C3%A1rios/get_usuarios');
     sleep(1);
+    check(res, {
+        'status is 200': (r) => r.status === 200
+    });
 }

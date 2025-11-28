@@ -21,4 +21,7 @@ export const options = {
 export default function () {
     const res = http.get('https://serverest.dev/#/');
     sleep(1);
+    check(res, {
+        'status is 200': (r) => r.status === 200
+    });
 }

@@ -18,4 +18,7 @@ export const options = {
 export default () => {
     const urlRes = http.get('https://test.k6.io');
     sleep(1);
+    check(res, {
+        'status is 200': (r) => r.status === 200
+    });
 }

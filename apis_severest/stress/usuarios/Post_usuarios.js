@@ -21,4 +21,7 @@ export const options = {
 export default function () {
     const res = http.post('https://serverest.dev/#/Usu%C3%A1rios/post_usuarios');
     sleep(1);
+    check(res, {
+        'status is 200': (r) => r.status === 200
+    });
 }

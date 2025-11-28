@@ -9,4 +9,7 @@ export const options = {
 export default function () {
     const res = http.get('https://serverest.dev/#/Carrinhos/get_carrinhos');
     sleep(1);
+    check(res, {
+        'status is 200': (r) => r.status === 200
+    });
 }
