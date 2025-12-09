@@ -28,6 +28,9 @@ export const options = {
   }
 };
 
+let myCounter = new Counter('my_counter');  //custom metric
+let newsPageResponseTrend = new Trend('response_time_news_page');  //custom metric
+
 export default function () {
     const res = http.del('https://serverest.dev/#/Usu%C3%A1rios/delete_usuarios___id_');
     sleep(1);

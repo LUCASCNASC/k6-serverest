@@ -20,6 +20,9 @@ export const options = {
   }
 };
 
+let myCounter = new Counter('my_counter');  //custom metric
+let newsPageResponseTrend = new Trend('response_time_news_page');  //custom metric
+
 export default function () {
     const res = http.put('https://serverest.dev/#/Produtos/put_produtos___id_');
     sleep(1);
