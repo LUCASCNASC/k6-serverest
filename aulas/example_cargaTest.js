@@ -23,7 +23,7 @@ export default function(){
 
     const userId = data[Math.floor(Math.random() * data.length)].id; //pegar um id aleatório do array de dados
     const BASE_URL = `https://test-api.k6.io/public/crocodiles/${userId}`; //usar o id para construir a URL
-    const res = http.get(BASE_URL)
+    let res = http.get(BASE_URL)
     
     check(res,{
         'status 200': (r) => r.status === 200
@@ -32,4 +32,7 @@ export default function(){
     check(res, {
         'status is 200': (r) => r.status === 200
     });
+
+    res = http.get('https://test.k6.io/news.php');
+    newsPageResponseTrend.add(res.timings.duration);
 }

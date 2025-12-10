@@ -32,9 +32,12 @@ let myCounter = new Counter('my_counter');  //custom metric
 let newsPageResponseTrend = new Trend('response_time_news_page');  //custom metric
 
 export default function () {
-    const res = http.get('https://serverest.dev/#/Usu%C3%A1rios/get_usuarios___id_');
+    let res = http.get('https://serverest.dev/#/Usu%C3%A1rios/get_usuarios___id_');
     sleep(1);
     check(res, {
         'status is 200': (r) => r.status === 200
     });
+
+    res = http.get('https://test.k6.io/news.php');
+    newsPageResponseTrend.add(res.timings.duration);
 }

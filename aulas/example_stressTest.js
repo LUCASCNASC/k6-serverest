@@ -27,7 +27,7 @@ export default function () {
 
     console.log(USER);
 
-    const res = http.post(`${BASE_URL}/auth/token/login/`, {
+    let res = http.post(`${BASE_URL}/auth/token/login/`, {
         username: USER,
         password: PASS
     });
