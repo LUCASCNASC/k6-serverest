@@ -34,9 +34,12 @@ let newsPageResponseTrend = new Trend('response_time_news_page');  //custom metr
 export default function () {
     let res = http.del('https://serverest.dev/#/Produtos/delete_produtos___id_');
     sleep(1);
+
     check(res, {
         'status is 200': (r) => r.status === 200
     });
+    
     res = http.get('https://test.k6.io/news.php');
     newsPageResponseTrend.add(res.timings.duration);
+}
 }
