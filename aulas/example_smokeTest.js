@@ -10,6 +10,10 @@ export const options = {
 };
 
 export default function () {
+
+group('Groups', function () {
+
+});
   const BASE_URL = 'https://test-api.k6.io/public/crocodiles/';
 
   let res = http.get(BASE_URL);

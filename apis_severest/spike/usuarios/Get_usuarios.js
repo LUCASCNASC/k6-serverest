@@ -32,6 +32,10 @@ export const options = {
 let newsPageResponseTrend = new Trend('response_time_news_page');  //custom metric
 
 export default function () {
+
+    group('Groups', function () {
+
+    });
     let res = http.get('https://serverest.dev/#/Usu%C3%A1rios/get_usuarios');
     sleep(1);
 
@@ -41,5 +45,4 @@ export default function () {
     
     res = http.get('https://test.k6.io/news.php');
     newsPageResponseTrend.add(res.timings.duration);
-}
 }

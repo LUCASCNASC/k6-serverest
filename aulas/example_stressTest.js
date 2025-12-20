@@ -21,6 +21,10 @@ const csvData = new SharedArray('Ler dados', function(){
 });
 
 export default function () {
+
+group('Groups', function () {
+
+});
     const USER = csvData[Math.floor(Math.random() * csvData.length)].email
     const PASS = 'user123'
     const BASE_URL = 'https://test-api.k6.io';
