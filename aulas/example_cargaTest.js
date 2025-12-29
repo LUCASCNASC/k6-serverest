@@ -1,6 +1,6 @@
 import http from 'k6/http'; //conseguir fazer requisições HTTP
 import { sleep, check } from 'k6';
-import { Counter, Trend } from 'k6/metrics'; //custom metric //conseguir fazer pausas
+import { Counter, Trend } from 'k6/metrics'; //custom metric; //conseguir fazer pausas
 import { SharedArray } from 'k6/data'; //conseguir ler dados de um arquivo externo, como .json
 
 export const options = {

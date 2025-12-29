@@ -1,6 +1,6 @@
 import http from 'k6/http';
 import { sleep, check } from 'k6';
-import { Counter, Trend } from 'k6/metrics'; //custom metric
+import { Counter, Trend } from 'k6/metrics'; //custom metric;
 
 export const options = {
     stages: [
@@ -21,8 +21,8 @@ export const options = {
   }
 };
 
-let myCounter = new Counter('my_counter');  //custom metric
-let newsPageResponseTrend = new Trend('response_time_news_page');  //custom metric
+let myCounter = new Counter('my_counter');  //custom metric;
+let newsPageResponseTrend = new Trend('response_time_news_page');  //custom metric;
 
 export default function () {
 

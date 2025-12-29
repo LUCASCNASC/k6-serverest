@@ -7,7 +7,7 @@
 
 import http from 'k6/http';
 import { sleep, check } from 'k6';
-import { Counter, Trend } from 'k6/metrics'; //custom metric
+import { Counter, Trend } from 'k6/metrics'; //custom metric;
 
 export const options = {
     executor: 'ramping-arrival-rate',
