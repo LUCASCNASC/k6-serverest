@@ -24,7 +24,6 @@ export default function () {
 
   group('Groups', function () {
 
-  });
     let res = http.del('https://serverest.dev/#/Usuarios/delete_usuarios___id_');
     sleep(1);
     check(res, {
@@ -32,4 +31,7 @@ export default function () {
     });
     res = http.get('https://test.k6.io/news.php');
     newsPageResponseTrend.add(res.timings.duration);
+
+  });
+    
 }
