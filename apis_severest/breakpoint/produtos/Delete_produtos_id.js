@@ -31,7 +31,6 @@ export default function () {
         let res = http.del('https://serverest.dev/#/Produtos/delete_produtos___id_');
         sleep(1);
 
-        
         check(res, {
             'status is 200': (r) => r.status === 200
         });
@@ -40,5 +39,4 @@ export default function () {
         newsPageResponseTrend.add(res.timings.duration);
 
     });
-    
 }

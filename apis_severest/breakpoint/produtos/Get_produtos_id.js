@@ -39,5 +39,4 @@ export default function () {
         newsPageResponseTrend.add(res.timings.duration);
 
     });
-    
 }

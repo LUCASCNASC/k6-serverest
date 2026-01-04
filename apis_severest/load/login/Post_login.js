@@ -43,10 +43,8 @@ export default function () {
             'status is 200': (r) => r.status === 200
         });
 
-        
         res = http.get('https://test.k6.io/news.php');
         newsPageResponseTrend.add(res.timings.duration);
 
     });
-    
 }
