@@ -35,7 +35,7 @@ let newsPageResponseTrend = new Trend('response_time_news_page');  //custom metr
 export default function () {
 
     group('Groups', function () {
-
+        
         let res = http.del('https://serverest.dev/#/Carrinhos/delete_carrinhos_cancelar_compra');
         sleep(1);
         
@@ -45,6 +45,5 @@ export default function () {
 
         res = http.get('https://test.k6.io/news.php');
         newsPageResponseTrend.add(res.timings.duration);
-
     });
 }
