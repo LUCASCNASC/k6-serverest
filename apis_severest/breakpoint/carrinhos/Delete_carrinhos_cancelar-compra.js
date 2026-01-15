@@ -16,8 +16,7 @@ export const options = {
     http_reqs: ['count>20'], //quantas solicitações quero, neste caso não pode ser menos de 20
     http_reqs: ['rate>4'], //quantas solicitações por segundo, neste caso não pode ser menos de 4 por segundo
     vus: ['value>9'], //o mínimo de usuários usados ao mesmo tempo
-    checks: ['rate>=0.98'],
-     //pelo menos 98% daas requisições precisam rodar normalmente
+    checks: ['rate>=0.98'], //pelo menos 98% daas requisições precisam rodar normalmente
     'http_req_duration{status:200}': ['p(95)<1000']
   }
 };
